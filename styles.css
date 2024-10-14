@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2C3E50; /* Dark blue */
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ECF0F1; /* Light grey */
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-item {
+    position: relative;
+    margin: 0 15px;
+}
+
+.menu-item a {
+    color: #ECF0F1; /* Light grey */
+    font-size: 16px;
+    text-decoration: none;
+    padding: 14px 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-item a:hover {
+    color: #3498DB; /* Blue hover */
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #34495E; /* Darker blue */
+    min-width: 200px;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown a {
+    padding: 12px 20px;
+    display: block;
+    color: #ECF0F1;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown a:hover {
+    background-color: #2ECC71; /* Light green hover */
+    color: white;
+}
+
+/* Show dropdown on hover */
+.menu-item:hover .dropdown {
+    display: block;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.search-bar input {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 1px solid #BDC3C7;
+    font-size: 14px;
+    width: 200px;
+    transition: width 0.3s ease-in-out;
+}
+
+.search-bar input:focus {
+    width: 250px;
+    outline: none;
+}
+
+.search-bar .btn {
+    padding: 8px 14px;
+    border: none;
+    background-color: #3498DB; /* Blue */
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar .btn:hover {
+    background-color: #2980B9; /* Darker blue */
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.cta-buttons .btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-buttons .btn.primary {
+    background-color: #E74C3C; /* Red */
+    color: white;
+}
+
+.cta-buttons .btn.secondary {
+    background-color: #2ECC71; /* Green */
+    color: white;
+}
+
+.cta-buttons .btn:hover {
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .cta-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+}
